@@ -27,16 +27,21 @@ function displayFounds(listFound)
 end
 
 furryCages = {"Furry Caged Beast", "Caged Mighty Wolf"}
-plants = {"Talador Orchid", "Nagrand Arrowbloom", "Starflower", "Gorgrond Flytrap", "Fireweed", "Frostweed"}
+plants = {"Talador Orchid", "Nagrand Arrowbloom", "Starflower", "Gorgrond Flytrap", "Fireweed", "Frostweed",
+"Furry Caged Beast", "Caged Mighty Wolf", "Sumptuous Fur",
+"True Iron Ore", "Blackrock Ore",
+"Alchemical Catalyst", "Sorcerous Earth", "Sorcerous Air", "Sorcerous Fire", "Sorcerous Water"}
 ore = {"True Iron Ore", "Blackrock Ore"}
 mats = {"Sumptuous Fur"}
 
+file = io.open("allItems.csv", "w")
+io.output(file)
 io.write("character, ")
 for index, keyWord in pairs(plants) do
     if index < #plants then
         io.write(keyWord, ", ")
     else
-        io.write(keyWord, "\n")
+        io.write(keyWord, ",\n")
     end
 end
 
@@ -54,5 +59,7 @@ for keyProfile, profile in pairs(ARKINVDB.profileKeys) do
             io.write(string.format("%d", total))
         end
     end
-    io.write("\n")
+    io.write(",\n")
 end
+
+io.close(file)
