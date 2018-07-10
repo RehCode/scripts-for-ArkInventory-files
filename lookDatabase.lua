@@ -1,3 +1,8 @@
+-- Update the search path
+local module_folder = "E:\\World of Warcraft\\WTF\\Account\\93974431#1\\SavedVariables"
+package.path = module_folder .. "?.lua;" .. package.path
+
+-- Load the module
 require("ArkInventory")
 
 local lookDatabase = {}
