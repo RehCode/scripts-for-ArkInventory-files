@@ -34,9 +34,9 @@ mats = {"Sumptuous Fur"}
 io.write("character, ")
 for index, keyWord in pairs(plants) do
     if index < #plants then
-        io.write(keyWord..", ")
+        io.write(keyWord, ", ")
     else
-        io.write(keyWord.."\n")
+        io.write(keyWord, "\n")
     end
 end
 
