@@ -9,11 +9,12 @@ words = {"Talador Orchid", "Nagrand Arrowbloom", "Starflower", "Gorgrond Flytrap
 "Alchemical Catalyst", "Sorcerous Earth", "Sorcerous Air", "Sorcerous Fire", "Sorcerous Water"}
 
 data_dir = "data/"
-filename = "allItems.json"
+ext = ".json"
+filename = "allItems-" .. os.time() .. ext
 
 if arg[1] then
     words = lookDatabase.lines_from_file(arg[1])
-    filename = string.match(arg[1], "^[%a%s-]+")..".json"
+    filename = string.match(arg[1], "^[%a%s-]+") .. os.time() .. ext
 end
 
 local dataJson = {}

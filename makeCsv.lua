@@ -8,14 +8,15 @@ words = {"Talador Orchid", "Nagrand Arrowbloom", "Starflower", "Gorgrond Flytrap
 "Alchemical Catalyst", "Sorcerous Earth", "Sorcerous Air", "Sorcerous Fire", "Sorcerous Water"}
 
 data_dir = "data/"
-filename_csv = "allItems.csv"
+ext = ".csv"
+filename = "allItems-" .. os.time() .. ext
 
 if arg[1] then
     words = lookDatabase.lines_from_file(arg[1])
-    filename_csv = string.match(arg[1], "^[%a%s-]+")..".csv"
+    filename = string.match(arg[1], "^[%a%s-]+").. os.time() .. ext
 end
 
-file = io.open(data_dir..filename_csv, "w")
+file = io.open(data_dir..filename, "w")
 io.output(file)
 io.write("character, ")
 for index, keyWord in pairs(words) do
