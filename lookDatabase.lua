@@ -39,4 +39,12 @@ function lookDatabase.getKeyProfiles()
     return keyProfiles
 end
 
+function lookDatabase.lines_from_file(file_name)
+    lines = {}
+    for line in io.lines(file_name) do 
+        lines[#lines + 1] = line
+    end
+    return lines
+end
+
 return lookDatabase
