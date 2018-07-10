@@ -8,6 +8,7 @@ words = {"Talador Orchid", "Nagrand Arrowbloom", "Starflower", "Gorgrond Flytrap
 "True Iron Ore", "Blackrock Ore",
 "Alchemical Catalyst", "Sorcerous Earth", "Sorcerous Air", "Sorcerous Fire", "Sorcerous Water"}
 
+data_dir = "data/"
 filename = "allItems.json"
 
 if arg[1] then
@@ -30,7 +31,7 @@ for index, keyProfile in pairs(keyProfiles) do
     end
 end
 
-local file_json = io.open(filename, "w")
+local file_json = io.open(data_dir..filename, "w")
 local raw = json.encode(dataJson)
 file_json:write(raw)
 file_json:close()

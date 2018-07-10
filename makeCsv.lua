@@ -7,6 +7,7 @@ words = {"Talador Orchid", "Nagrand Arrowbloom", "Starflower", "Gorgrond Flytrap
 "True Iron Ore", "Blackrock Ore",
 "Alchemical Catalyst", "Sorcerous Earth", "Sorcerous Air", "Sorcerous Fire", "Sorcerous Water"}
 
+data_dir = "data/"
 filename_csv = "allItems.csv"
 
 if arg[1] then
@@ -14,7 +15,7 @@ if arg[1] then
     filename_csv = string.match(arg[1], "^[%a%s-]+")..".csv"
 end
 
-file = io.open(filename_csv, "w")
+file = io.open(data_dir..filename_csv, "w")
 io.output(file)
 io.write("character, ")
 for index, keyWord in pairs(words) do
