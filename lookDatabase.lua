@@ -48,4 +48,22 @@ function lookDatabase.lines_from_file(file_name)
     return lines
 end
 
+function lookDatabase.find_all(words)
+    local keyProfiles = lookDatabase.getKeyProfiles()
+    local dataFound = {}
+    for index, keyProfile in pairs(keyProfiles) do
+        local profile_name = keyProfile:match("^[%a]+")
+        dataFound[#dataFound+1] = {name = profile_name, items = {}}
+        for index, keyWord in pairs(words) do
+            listFound = lookDatabase.searchWord(keyProfile, keyWord)
+            total = 0
+            for keyFound, found in pairs(listFound) do
+                total = total + found.count
+            end
+            dataFound[#dataFound].items[keyWord] = total
+        end
+    end
+    return dataFound
+end
+
 return lookDatabase
