@@ -30,11 +30,6 @@ function lookDatabase.searchWord(keyProfile, keyWord)
     return listFound
 end
 
-function lookDatabase.displayListFound(listFound)
-    for keyFound, itemFound in pairs(listFound) do
-        io.write(itemFound.h, ",  ", itemFound.count)
-    end
-end
 
 function lookDatabase.getKeyProfiles()
     keyProfiles = {}
@@ -43,6 +38,7 @@ function lookDatabase.getKeyProfiles()
     end
     return keyProfiles
 end
+
 
 function lookDatabase.lines_from_file(file_name)
     lines = {}
