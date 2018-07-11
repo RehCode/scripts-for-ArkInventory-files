@@ -13,7 +13,7 @@ filename = "allItems-" .. os.time()
 
 if arg[1] then
     words = lookDatabase.lines_from_file(arg[1])
-    filename = string.match(arg[1], "^[%a%s-]+") .. os.time()
+    filename = string.match(arg[1], "^[%a%s-]+") .. "-" .. os.time()
 end
 
 local dataFound = {}
