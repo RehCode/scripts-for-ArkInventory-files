@@ -31,7 +31,7 @@ for index, keyProfile in pairs(keyProfiles) do
 end
 
 function save_json()
-    filename = filename .. ".json"
+    local filename = filename .. ".json"
     local file_json = io.open(data_dir..filename, "w")
     local raw = json.encode(dataFound)
     file_json:write(raw)
@@ -39,7 +39,7 @@ function save_json()
 end
 
 function save_csv()
-    filename = filename .. ".csv"
+    local filename = filename .. ".csv"
     file_csv = io.open(data_dir..filename, "w")
 
     file_csv:write("character, ")
