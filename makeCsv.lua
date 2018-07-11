@@ -1,5 +1,5 @@
-local json = require("dkjson")
-local lookDatabase = require("lookDatabase")
+json = require("dkjson")
+lookDatabase = require("lookDatabase")
 
 keyProfiles = lookDatabase.getKeyProfiles()
 
@@ -16,19 +16,7 @@ if arg[1] then
     filename = string.match(arg[1], "^[%a%s-]+") .. "-" .. os.time()
 end
 
-local dataFound = {}
-for index, keyProfile in pairs(keyProfiles) do
-    local profile_name = keyProfile:match("^[%a]+")
-    dataFound[#dataFound+1] = {name = profile_name, items = {}}
-    for index, keyWord in pairs(words) do
-        listFound = lookDatabase.searchWord(keyProfile, keyWord)
-        total = 0
-        for keyFound, found in pairs(listFound) do
-            total = total + found.count
-        end
-        dataFound[#dataFound].items[keyWord] = total
-    end
-end
+dataFound = lookDatabase.find_all(words)
 
 function save_json()
     local filename = filename .. ".json"
@@ -40,11 +28,11 @@ end
 
 function save_csv()
     local filename = filename .. ".csv"
-    file_csv = io.open(data_dir..filename, "w")
-
+    local file_csv = io.open(data_dir..filename, "w")
+    
     file_csv:write("character, ")
-    for index, keyWord in pairs(words) do
-        file_csv:write(keyWord, ", ")
+    for itemName in pairs(dataFound[1].items) do
+        file_csv:write(itemName, ", ")
     end
     file_csv:write("\n")
 
@@ -53,9 +41,8 @@ function save_csv()
         for keyItemName, itemCount in pairs(data.items) do
             file_csv:write(itemCount, ", ")
         end
-        file_csv:write(",\n")
+        file_csv:write("\n")
     end
-
     file_csv:close(file)
 end
 
