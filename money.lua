@@ -1,5 +1,4 @@
-require("ArkInventoryTesting")
-
+lookDatabase = require("lookDatabase")
 
 function formato_numeros(num)
     -- num = 9123456789.987654321
