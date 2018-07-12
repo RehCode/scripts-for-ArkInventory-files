@@ -38,12 +38,12 @@ for index, keyProfile in pairs(keyProfiles) do
     end
 
     for itemName, item in pairs(wordsCount) do
-        io.write(string.format("\t%s: %d\n", itemName, item.count))
+        io.write(string.format("%s: %d\n", itemName, item.count))
 
-        if not wordsCountAll[itemName] then
-            wordsCountAll[itemName] = {count = item.count, h = item.h}
+        if wordsCountAll[itemName] then
+            wordsCountAll[itemName].count = wordsCountAll[itemName].count + item.count
         else
-            wordsCountAll[itemName].count = wordsCount[itemName].count + item.count
+            wordsCountAll[itemName] = {count = item.count, h = item.h}
         end
 
     end
