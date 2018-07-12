@@ -17,7 +17,7 @@ function lookDatabase.searchWord(keyProfile, keyWord)
             if bag.slot then
                 for keySlot, slot in pairs(bag.slot) do
                     if slot.h then
-                        encontrado = slot.h:find(keyWord)
+                        encontrado = slot.h:match(keyWord)
                         if encontrado then
                             itemsFound = {h = slot.h, count = slot.count}
                             listFound[#listFound + 1] = itemsFound
