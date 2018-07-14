@@ -24,8 +24,8 @@ for keyProfile in profileKeys:
 
     if 'money' in database['global']['player']['data'][keyProfile]['info']:
         money = database['global']['player']['data'][keyProfile]['info']['money']
-        print("{}:\n {:>17,}".format(name, money / 1e4))
+        print("{:<8} {:>18,}".format(name + ":", money / 1e4))
         total += money
 
-print("-"*25)
-print("Total:\n {:>17,}".format(total/1e4))
+print("-"*27)
+print("Total: {:>20,}".format(total/1e4))
