@@ -1,3 +1,5 @@
+-- show the total money in all characters
+
 lookDatabase = require("lookDatabase")
 
 function formato_numeros(num)

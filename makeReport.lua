@@ -1,3 +1,6 @@
+-- Generate a report whith the count of the given item names in all characters
+-- The report is saved in /data (csv and json)
+
 json = require("dkjson")
 lookDatabase = require("lookDatabase")
 
@@ -14,6 +17,10 @@ filename = "allItems-" .. os.time()
 if arg[1] then
     words = lookDatabase.lines_from_file(arg[1])
     filename = string.match(arg[1], "^[%a%s-]+") .. "-" .. os.time()
+else
+    io.write("\tUsing interntal words.\n")
+    io.write("\tYou can pass a file text with the words to search.\n")
+    io.write("\texample: lua makeReport.lua words.txt\n")
 end
 
 dataFound = lookDatabase.find_all(words)

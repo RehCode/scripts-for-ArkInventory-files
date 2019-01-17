@@ -1,3 +1,5 @@
+-- Generate a report given a word with the total count per character and global
+
 local lookDatabase = require("lookDatabase")
 
 keyProfiles = lookDatabase.getKeyProfiles()
@@ -49,6 +51,7 @@ for index, keyProfile in pairs(keyProfiles) do
     end
     
 end
+
 io.write("\n")
 io.write(string.rep("-", 27))
 io.write(" Total: \n")

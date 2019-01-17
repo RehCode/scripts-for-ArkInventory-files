@@ -1,15 +1,16 @@
--- Update the search path
-local module_folder = "E:\\World of Warcraft\\WTF\\Account\\93974431#1\\SavedVariables\\"
+-- A module to work the data of ArkInventory
+
+-- Update the search path of lua to look for the database of ArkInventory
+local module_folder = "E:\\World of Warcraft\\WTF\\Account\\63974431#1\\SavedVariables\\"
 package.path = module_folder .. "?.lua;" .. package.path
 
--- Load the module
+-- Load the module (database)
 require("ArkInventory")
 
 local lookDatabase = {}
--- ARKINVDB.global.player.data["Zhok - Magtheridon"].location[1].bag[1].slot[1].h
--- for k in pairs(ARKINVDB.global.player.data["Zhok - Magtheridon"].location[1].bag) do print(k) end
+-- ARKINVDB.global.player.data["Link - Magtheridon"].location[1].bag[1].slot[1].h
+-- for k in pairs(ARKINVDB.global.player.data["Link - Magtheridon"].location[1].bag) do print(k) end
 
--- file = io.open("jaulas.csv", "w")
 function lookDatabase.searchWord(keyProfile, keyWord)
     listFound = {}
     for keyLocation, location in pairs(ARKINVDB.global.player.data[keyProfile].location) do

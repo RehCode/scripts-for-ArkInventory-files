@@ -1,3 +1,5 @@
+# Show the money (gold) of all character, total global, old total and the difference between old and new
+
 import json
 import subprocess
 import glob
@@ -19,7 +21,7 @@ def get_profile_keys(database):
 def getMoneys(database):
     moneys = {"total":0, "profiles":[]}
     # show moneys
-    # database['global']['player']['data']['Zhok - Magtheridon']['info']['money']
+    # database['global']['player']['data']['link - Magtheridon']['info']['money']
     for keyProfile in database['profileKeys'].keys():
         name = database['global']['player']['data'][keyProfile]['info']['name']
         if 'money' in database['global']['player']['data'][keyProfile]['info']:

@@ -306,7 +306,7 @@ ARKINVDB = {
 		},
 		["player"] = {
 			["data"] = {
-				["Zhok - Magtheridon"] = {
+				["Zook - Magtheridon"] = {
 					["info"] = {
 						["faction_local"] = "Horde",
 						["isplayer"] = true,
@@ -314,7 +314,7 @@ ARKINVDB = {
 						["money"] = 1033673509,
 						["gender"] = 2,
 						["class_local"] = "Warrior",
-						["player_id"] = "Zhok - Magtheridon",
+						["player_id"] = "Zook - Magtheridon",
 						["skills"] = {
 							186, -- [1]
 							755, -- [2]
@@ -324,7 +324,7 @@ ARKINVDB = {
 							129, -- [6]
 						},
 						["race"] = "Pandaren",
-						["name"] = "Zhok",
+						["name"] = "Zook",
 						["faction"] = "Horde",
 						["race_local"] = "Pandaren",
 						["level"] = 110,
@@ -8720,7 +8720,7 @@ ARKINVDB = {
 						},
 					},
 				},
-				["Reshe - Magtheridon"] = {
+				["Reze - Magtheridon"] = {
 					["info"] = {
 						["skills"] = {
 							182, -- [1]
@@ -8736,9 +8736,9 @@ ARKINVDB = {
 						["gender"] = 2,
 						["class_local"] = "Druid",
 						["class"] = "DRUID",
-						["player_id"] = "Reshe - Magtheridon",
+						["player_id"] = "Reze - Magtheridon",
 						["race"] = "Tauren",
-						["name"] = "Reshe",
+						["name"] = "Reze",
 						["faction"] = "Horde",
 						["race_local"] = "Tauren",
 						["level"] = 110,
@@ -12905,10 +12905,10 @@ ARKINVDB = {
 						},
 					},
 				},
-				["Raendor - Magtheridon"] = {
+				["Raen - Magtheridon"] = {
 					["info"] = {
 						["faction_local"] = "Horde",
-						["player_id"] = "Raendor - Magtheridon",
+						["player_id"] = "Raen - Magtheridon",
 						["isplayer"] = true,
 						["guid"] = "Player-78-0B948583",
 						["money"] = 6152706,
@@ -12922,7 +12922,7 @@ ARKINVDB = {
 						},
 						["class_local"] = "Demon Hunter",
 						["race"] = "BloodElf",
-						["name"] = "Raendor",
+						["name"] = "Raen",
 						["faction"] = "Horde",
 						["race_local"] = "Blood Elf",
 						["level"] = 101,
@@ -14795,7 +14795,7 @@ ARKINVDB = {
 						},
 					},
 				},
-				["Rakogg - Magtheridon"] = {
+				["Rakko - Magtheridon"] = {
 					["info"] = {
 						["realm"] = "Magtheridon",
 						["isplayer"] = true,
@@ -14806,7 +14806,7 @@ ARKINVDB = {
 						["class"] = "PALADIN",
 						["level"] = 110,
 						["race"] = "Tauren",
-						["name"] = "Rakogg",
+						["name"] = "Rakko",
 						["faction"] = "Horde",
 						["race_local"] = "Tauren",
 						["skills"] = {
@@ -14817,7 +14817,7 @@ ARKINVDB = {
 							185, -- [5]
 							129, -- [6]
 						},
-						["player_id"] = "Rakogg - Magtheridon",
+						["player_id"] = "Rakko - Magtheridon",
 						["faction_local"] = "Horde",
 					},
 					["location"] = {
@@ -19209,9 +19209,9 @@ ARKINVDB = {
 		["version"] = 30743,
 	},
 	["profileKeys"] = {
-		["Zhok - Magtheridon"] = "Default",
-		["Raendor - Magtheridon"] = "Default",
-		["Rakogg - Magtheridon"] = "Default",
-		["Reshe - Magtheridon"] = "Default",
+		["Zook - Magtheridon"] = "Default",
+		["Raen - Magtheridon"] = "Default",
+		["Rakko - Magtheridon"] = "Default",
+		["Reze - Magtheridon"] = "Default",
 	},
 }
