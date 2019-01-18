@@ -1,4 +1,4 @@
-# scripts-for-ArkInventory-files
+# scripts-for-ArkInventory-saved-data
 Scripts in lua and python to work with the ArkInvetory saved data <br>
 
 ## Functions
